@@ -1,0 +1,8 @@
+<div class="contenedor">
+  <h2>Ejemplo de directiva ngStyle</h2>
+  <p>Introduzca la puntuación</p>
+  <input type="text" [(ngModel)]="puntuacion">
+  <p>La puntuación obtenida es: 
+    <span [ngStyle]="{'color': ( puntuacion >= 5 ? 'green' : 'red' )}">{{puntuacion}}</span>
+  </p>
+</div>

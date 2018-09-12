@@ -1,0 +1,12 @@
+<div class="contenedor">
+  <h2>Ejemplo de directiva ngClass</h2>
+  <p>Introduzca la puntuación</p>
+  <input type="text" [(ngModel)]="puntuacion">
+  <!-- <div [ngClass]="{ aprobado: puntuacion >= 5, suspenso: puntuacion < 5}"> 
+    La puntuación obtenida es:{{puntuacion}}
+  </div> -->
+  <div [ngClass]="puntuacion >= 5 ? 'aprobado' : 'suspenso'"> 
+    La puntuación obtenida es:{{puntuacion}}
+  </div>
+ 
+</div>

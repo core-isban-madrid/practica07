@@ -1,0 +1,17 @@
+<div class="contenedor">
+  <h2>Ejemplo de directiva *ngIf</h2>
+  <p>Confirme el borrado introducciendo el nombre del directorio</p>
+  <input type="text" [(ngModel)]="directorioCheck">
+  <button *ngIf="directorioCheck === directorio">Borrar</button>
+  <hr>
+  <h2>Ejemplo de directiva *ngIf con else</h2>
+  <p>¿Cual es la capital de España?</p>
+  <input type="text" [(ngModel)]="capital">
+  <p *ngIf="!capital; else completada">Complete la respuesta</p>
+  <ng-template #completada>
+    <p *ngIf="setResultado(); else incorrecta">¡Enhorabuena!</p>
+    <ng-template #incorrecta>
+      Lo sentimos, no es correcta.
+    </ng-template>
+  </ng-template>
+</div>
